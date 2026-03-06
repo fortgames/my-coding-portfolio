@@ -1,0 +1,5 @@
+{
+  "name": "George Mburu Portfolio",
+  "description": "Professional portfolio for George Mburu, a Software Engineer specializing in full-stack web and mobile development, machine learning, and cloud computing.",
+  "requestFramePermissions": ["camera"]
+}
