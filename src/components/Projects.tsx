@@ -13,7 +13,6 @@ const projects = [
     description: 'Developed a detection model using TensorFlow and OpenCV, increasing object recognition accuracy through a CNN on preprocessed datasets.',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
     tags: ['TensorFlow', 'OpenCV', 'Python', 'CNN'],
-    github: 'https://github.com',
     demoType: 'interactive',
   },
   {
@@ -22,7 +21,6 @@ const projects = [
     description: 'Multi-user mobile vending application using Flutter and Firebase, incorporating real-time map integration and 4 payment gateways.',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop',
     tags: ['Flutter', 'Firebase', 'Dart', 'Maps API'],
-    github: 'https://github.com',
     demoType: 'interactive',
   },
   {
@@ -31,7 +29,6 @@ const projects = [
     description: 'Built a comprehensive task management dashboard for the Kenyan market with real-time updates and intuitive user interface.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
     tags: ['React', 'Django', 'PostgreSQL', 'REST API'],
-    github: 'https://github.com',
     demoType: 'interactive',
   },
 ];
@@ -121,20 +118,11 @@ export default function Projects() {
               <div className="flex items-center gap-4 mt-auto">
                 <button 
                   onClick={() => setActiveDemo(project.id)}
-                  className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-2xl hover:bg-white/90 transition-all text-sm"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-2xl hover:bg-white/90 transition-all text-sm"
                 >
                   <Play size={16} fill="currentColor" />
                   Live Demo
                 </button>
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all text-sm"
-                >
-                  <Github size={16} />
-                  Source Code
-                </a>
               </div>
             </motion.div>
           ))}
