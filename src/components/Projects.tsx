@@ -5,8 +5,62 @@ import DemoModal from './DemoModal';
 import ObjectDetectionDemo from './demos/ObjectDetectionDemo';
 import NWPDSimulator from './demos/NWPDSimulator';
 import MobileVendingSimulator from './demos/MobileVendingSimulator';
+import BankingDemo from './demos/BankingDemo';
+import CookingDemo from './demos/CookingDemo';
+import SafetyTrackerDemo from './demos/SafetyTrackerDemo';
+import GasDeliveryDemo from './demos/GasDeliveryDemo';
+import FitnessTrackerDemo from './demos/FitnessTrackerDemo';
+import SmartHomeDemo from './demos/SmartHomeDemo';
 
 const projects = [
+  {
+    id: 'fitness-tracker',
+    title: 'FitPulse Tracker',
+    description: 'A comprehensive fitness and health monitoring application featuring workout logging, step tracking, and progress analytics.',
+    image: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop',
+    tags: ['React', 'HealthTech', 'Analytics', 'Framer Motion'],
+    demoType: 'interactive',
+  },
+  {
+    id: 'smart-home',
+    title: 'Kejani IoT',
+    description: 'An advanced smart home automation and security control center for managing devices, climate, and live camera feeds.',
+    image: 'https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?auto=format&fit=crop&q=80&w=2070',
+    tags: ['React', 'IoT', 'Security', 'Real-time'],
+    demoType: 'interactive',
+  },
+  {
+    id: 'banking-app',
+    title: 'Pesa Mtaani',
+    description: 'A high-fidelity fintech application featuring real-time balance tracking, secure transfers, and transaction history.',
+    image: 'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?auto=format&fit=crop&q=80&w=2070',
+    tags: ['React', 'Framer Motion', 'Fintech', 'UI/UX'],
+    demoType: 'interactive',
+  },
+  {
+    id: 'cooking-app',
+    title: 'ChefMaster Cooking App',
+    description: 'Interactive recipe platform with step-by-step cooking mode, built-in timers, and ingredient management.',
+    image: 'https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=2070&auto=format&fit=crop',
+    tags: ['React', 'Lucide', 'Culinary', 'Interactive'],
+    demoType: 'interactive',
+  },
+  {
+    id: 'safety-tracker',
+    title: 'SafeGuard Tracker',
+    description: 'Real-time personal safety application with SOS triggers, live location tracking, and emergency contact integration.',
+    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop',
+    tags: ['React', 'Safety', 'Maps', 'Real-time'],
+    demoType: 'interactive',
+  },
+  {
+    id: 'gas-delivery',
+    title: 'GasGo Delivery App',
+    description: 'On-demand gas delivery service with real-time tracking, order management, and secure payment integration.',
+    image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&q=80&w=2070',
+    tags: ['React', 'Logistics', 'Tracking', 'E-commerce'],
+    demoType: 'interactive',
+  },
   {
     id: 'object-detection',
     title: 'Object Detection Model',
@@ -38,6 +92,18 @@ export default function Projects() {
 
   const renderDemo = () => {
     switch (activeDemo) {
+      case 'banking-app':
+        return <BankingDemo />;
+      case 'cooking-app':
+        return <CookingDemo />;
+      case 'safety-tracker':
+        return <SafetyTrackerDemo />;
+      case 'gas-delivery':
+        return <GasDeliveryDemo />;
+      case 'fitness-tracker':
+        return <FitnessTrackerDemo />;
+      case 'smart-home':
+        return <SmartHomeDemo />;
       case 'object-detection':
         return <ObjectDetectionDemo />;
       case 'nwpd-taifa':

@@ -64,7 +64,7 @@ export default function App() {
               <div className="grid grid-cols-1 gap-8 mt-12">
                 <div>
                   <div className="text-2xl font-bold mb-1">BSc in Information Technology</div>
-                  <div className="text-sm text-white/40 uppercase tracking-widest font-bold">Zetech University (2021 - Present)</div>
+                  <div className="text-sm text-white/40 uppercase tracking-widest font-bold">Zetech University</div>
                 </div>
               </div>
             </motion.div>
