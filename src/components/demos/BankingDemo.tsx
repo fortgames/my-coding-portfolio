@@ -37,7 +37,7 @@ export default function BankingDemo() {
       setTransferAmount('');
       setRecipient('');
       setShowTransfer(false);
-      alert(`Successfully transferred $${amount} to ${recipient}`);
+      alert(`Successfully transferred KSh ${amount} to ${recipient}`);
     }
   };
 
@@ -80,7 +80,7 @@ export default function BankingDemo() {
               <div className="relative z-10">
                 <span className="text-white/60 text-sm font-medium mb-2 block">Total Balance</span>
                 <h2 className="text-4xl font-bold mb-8 tracking-tight">
-                  ${balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  KSh {balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </h2>
                 <div className="flex items-center gap-4">
                   <button 
@@ -140,7 +140,7 @@ export default function BankingDemo() {
                       </div>
                     </div>
                     <div className={`font-bold text-sm ${tx.amount > 0 ? 'text-emerald-500' : 'text-white'}`}>
-                      {tx.amount > 0 ? '+' : ''}{tx.amount.toLocaleString(undefined, { style: 'currency', currency: 'USD' })}
+                      {tx.amount > 0 ? '+' : ''}KSh {Math.abs(tx.amount).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </div>
                   </motion.div>
                 ))}
@@ -199,7 +199,7 @@ export default function BankingDemo() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-bold text-white/40 uppercase tracking-widest mb-2 block">Amount ($)</label>
+                  <label className="text-xs font-bold text-white/40 uppercase tracking-widest mb-2 block">Amount (KSh)</label>
                   <input 
                     type="number" 
                     required
